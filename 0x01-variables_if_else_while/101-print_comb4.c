@@ -19,7 +19,7 @@ int main(void)
 				if ((i < j) & (j < k) & (k <= '9'))
 				{
 					putchar(i);
-					putchar(l);
+					putchar(j);
 					putchar(k);
 
 					if ((i + j + k) < 168)
