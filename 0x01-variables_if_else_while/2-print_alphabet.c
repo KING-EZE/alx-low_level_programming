@@ -3,13 +3,14 @@
 #include <stdio.h>
 
 /**
- * main - print alphabets in lower case
- *
- * Return: Always 0 (Success)
+ * main - entry point
+ * Description: Alaphabets
+ * Return: zero on success
  */
 int main(void)
 {
-	char letter = 'a'
+	char letter = 'a';
+
 		while (letter <= 'z')
 		{
 			putchar(letter);
