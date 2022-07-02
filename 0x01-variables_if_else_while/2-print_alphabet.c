@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
@@ -7,10 +9,11 @@
  */
 int main(void)
 {
-	char i = 'a'
-		while (i <= 'z')
+	char letter = 'a'
+		while (letter <= 'z')
 		{
-			putchar(i), i++);
+			putchar(letter);
+			letter++;
 		}
 	putchar('\n');
 	return (0);
