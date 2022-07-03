@@ -1,12 +1,13 @@
 #include <stdio.h>
 /**
  * main - writes 00-99
- * Decription:Writes all unique combinations
+ * Decription: Numbers
  * Return: zero for success
  */
 int main(void)
 {
 	int i, j;
+
 	for (i = 0; i <= 99; i++)
 	{
 		for (j = 0; j <= 99; j++)
@@ -30,4 +31,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-					
