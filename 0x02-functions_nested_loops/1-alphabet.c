@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * check the code for Holberton School students.
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0 (success)
  */
-int main(void)
+void print_alphabet(void)
 {
 	int a;
 
