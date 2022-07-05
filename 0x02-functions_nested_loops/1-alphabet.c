@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - print in alphabet lowercase
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0 (success)
  */
@@ -13,4 +13,5 @@ int main(void)
 		_putchar(a);
 	}
 	_putchar('\n');
+	return (0);
 }
