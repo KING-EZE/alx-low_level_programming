@@ -1,5 +1,9 @@
 #include <unistd.h>
+#include "main.h"
 /**
+ * main -check the code for Holberton School students.
+ *
+ * Return: Always 0.
  * _putchar - writes the character c to stdout.
  * print_alphabet - prints alphabet and returns new line.
  * print_alphabet_x10 - print alphabet 10 times.
@@ -14,16 +18,20 @@
  * print_to_98 - prints all natural numbers to 98
  * print_times_table - print times table up to
  */
-int _putchar(char);
-void print_alphabet(void);
-void print_alphabet_x10(void);
-int _islower(int c);
-int _isalpha(int c);
-int print_sign(int n);
-int _abs(int);
-int print_last_digit(int);
-void jack_bauer(void);
-void times_table(void);
-int add(int, int);
-void print_to_98(int n);
-void print_times_table(int n);
+int main(void)
+{
+	int _putchar(char);
+	void print_alphabet(void);
+	void print_alphabet_x10(void);
+	int _islower(int c);
+	int _isalpha(int c);
+	int print_sign(int n);
+	int _abs(int);
+	int print_last_digit(int);
+	void jack_bauer(void);
+	void times_table(void);
+	int add(int, int);
+	void print_to_98(int n);
+	void print_times_table(int n);
+	return (0);
+}
