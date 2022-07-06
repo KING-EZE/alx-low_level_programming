@@ -9,7 +9,6 @@ void times_table(void)
 
 	for (a = 0; a <= 9; a++)
 	{
-		_putchar('0');
 		for (b = 0; b <= 9; b++)
 		{
 			opp = a * b;
@@ -18,6 +17,7 @@ void times_table(void)
 			if (opp <= 9)
 			{
 				_putchar(' ');
+				_putchar((opp % 10) + '0');
 			}
 			else
 			{
