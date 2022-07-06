@@ -12,16 +12,24 @@ void times_table(void)
 		for (b = 0; b <= 9; b++)
 		{
 			opp = a * b;
-			_putchar(',');
-			_putchar(' ');
-			if (opp <= 9)
+			if (b != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
+			if (opp >= 10)
+			{
+				_putchar((opp / 10) + '0');
+				_putchar((opp % 10) + '0');
+			}
+			else if ((opp < 10) && (b != 0))
 			{
 				_putchar(' ');
 				_putchar((opp % 10) + '0');
 			}
 			else
 			{
-				_putchar((opp / 10) + '0');
 				_putchar((opp % 10) + '0');
 			}
 		}
