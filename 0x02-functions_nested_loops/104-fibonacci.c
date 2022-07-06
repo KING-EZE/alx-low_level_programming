@@ -23,7 +23,7 @@ int main(void)
 	x = x / 1000;
 	b = y % 1000;
 	y = y / 1000;
-	while (count <= 90)
+	while (count <= 98)
 	{
 		take = (a + b) / 1000;
 		c = (a + b) - take * 1000;
