@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - main funtion entry
- *
- * Return: Always 0 (success)
- */
 int main(void)
 {
 	int n;
