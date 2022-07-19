@@ -2,8 +2,8 @@
 
 /**
  * print_diagsums - print diagonal sums
- * @a: the marix
- * @size: the size
+ * @a: the pointer
+ * @size: the size of the marix
  * Return: void
  */
 void print_diagsums(int *a, int size)
@@ -12,8 +12,9 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		sum1 += a[(size + 1) * i];
-		sum2 += a[(size - 1) * (b + 1)];
+		sum1 += *(a + (size * i + i));
+		sum2 += *(a + (size * i + size - 1 - i));
 	}
-	printf("%d, %d\n", sum1, sum2);
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
