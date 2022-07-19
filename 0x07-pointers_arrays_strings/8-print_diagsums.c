@@ -2,7 +2,7 @@
 
 /**
  * print_diagsums - print diagonal sums
- * @a: marix
+ * @a: the marix
  * @size: the size
  * Return: void
  */
@@ -12,9 +12,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		sum1 += *(a + (size * i + i));
-		sum2 += *(a + (size * i + size - 1 - i));
+		sum1 += a[(size + 1) * i];
+		sum2 += a[(size - 1) * (b + 1)];
 	}
-	printf("%d, ", sum1);
-	printf("%d\n", sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
