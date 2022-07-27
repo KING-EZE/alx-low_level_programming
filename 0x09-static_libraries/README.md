@@ -1,1 +1,1 @@
-static library cration
+0x09-statics_libraries
