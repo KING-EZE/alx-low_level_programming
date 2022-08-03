@@ -5,14 +5,17 @@
 /**
  * free_dog - frees dogs
  * @d: pointer to the dog to be freed.
+ *
  * Return: void
  */
 void free_dog(dog_t *d)
 {
-	if (d)
-	{
-		free(d->name);
+	if (d == NULL)
+		return;
+	if (d->owner != NULL)
 		free(d->owner);
-		free(d);
-	}
+	if (d->name != NULL)
+		free(d->name);
+
+	free(d);
 }
