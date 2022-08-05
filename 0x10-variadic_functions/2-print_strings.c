@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_string - print a string followed by a newline
+ * print_strings - print a string followed by a newline
  * @separator: string to be printed
  * @n: number of strings to be passed to function
  * Return: void
  */
-void print_string(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int j;
 	va_list ip;
