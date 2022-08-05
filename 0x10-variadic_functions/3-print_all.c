@@ -1,79 +1,53 @@
 #include "variadic_functions.h"
-#include <stdlib.h>
+#include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _printchar - print char type element from va_list
- * @list: va_list passed to function
- */
-void _printchar(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
-
-/**
- * _printstr - print string elements from va_list
- * @list: va_list passed to the function
- */
-void _printstr(va_list list)
-{
-	char *s;
-
-	s = va_arg(list, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
-}
-
-/**
- * _printfloat - print float type element from va_list
- * @list: va_list passed to function
- */
-void _printfloat(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-
-/**
- * _printint - print int type element from va_list
- * @list: va_list passed to function
- */
-void _printint(va_list list)
-{
-	printf("%d", va_arg(list, int));
-}
-
-/**
- * print_all - print anything if char, int, float or string
- * @format: strings og formats to use and print
+ * print_all - prints anything
+ * @format: a list of types of arguments passed to function
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
-	va_list args;
-	char *ip;
+	va_list list;
+	unsigned int i = 0, j, c = 0;
+	char *s;
+	const char t_arg[] = "cifs";
 
-	checker storage[] = {
-		{ "c", _printchar },
-		{ "f", _printfloat },
-		{ "s", _printstr },
-		{ "i", _printint },
-	};
-
-	i = 0;
-	ip = "";
-	va_start(args, format);
-	while (format != NULL && format[i / 4] != '\0')
+	va_start(list, format);
+	while (format && format[i])
 	{
-		j = i % 4;
-		if (storage[j].type[0] == format[i / 4])
+		j = 0;
+		while (t_arg[j])
 		{
-			printf("%s", ip);
-			storage[j].f(args);
-			ip = ", ";
+			if (format[i] == t_arg[j] && c)
+			{
+				printf(", ");
+				break;
+			} j++;
 		}
-		i++;
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(list, int)), c = 1;
+				break;
+			case 'i':
+				printf("%d", va_arg(list, int)), c = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(list, double)), c = 1;
+				break;
+			case 's':
+				s = va_arg(list, char *), c = 1;
+				if (s != NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", s);
+				break;
+		} i++;
 	}
-	printf("\n");
-	va_end(args);
+	printf("\n"), va_end(list);
 }
