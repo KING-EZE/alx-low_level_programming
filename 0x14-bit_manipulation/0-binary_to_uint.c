@@ -8,9 +8,9 @@
 unsigned int binary_to_unit(const char *b)
 {
 	int i;
-	unsigned int count;
+	unsigned int num;
 
-	count = 0;
+	num = 0;
 	if (!b)
 		return (0);
 	for (i = 0; b[i] != '\0'; i++)
@@ -20,9 +20,9 @@ unsigned int binary_to_unit(const char *b)
 	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		count <<= 1;
+		num <<= 1;
 		if (b[i] == '1')
-			count += 1;
+			num += 1;
 	}
-	return (count);
+	return (num);
 }
